@@ -27,7 +27,7 @@
 - **Model**: [`nateraw/food`](https://huggingface.co/nateraw/food)
 - **Dataset**: Trained on **Food101**
 - **Task**: Predicts top food labels (e.g., `chicken_wings`) with probabilities.
-- **Threshold**: Only predictions with confidence ≥ 10% are used.
+- **Threshold**: Only predictions with confidence ≥ 30% are used.
 
 ### 📊 3. Calorie Lookup (Option A)
 - **Source**: [Open Food Facts](https://openfoodfacts.org)  
@@ -121,7 +121,7 @@ requests
 1. **Upload** an image of food.
 2. BLIP **generates a caption** (e.g., "a plate of chicken wings and fries").
 3. ViT **classifies top 3 food labels** from the image (e.g., `chicken_wings`, `onion_rings`).
-4. App **filters labels ≥ 10% confidence**.
+4. App **filters labels ≥ 30% confidence**.
 5. App tries to **match labels with OpenFoodFacts dataset** to get `energy-kcal_100g`.
 6. If a match is not found:
    - Calls **Groq LLM** (e.g., *"Estimate calories per 100g of biryani"*) to generate fallback value.
